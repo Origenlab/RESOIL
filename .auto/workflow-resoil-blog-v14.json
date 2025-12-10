@@ -1,0 +1,568 @@
+{
+  "name": "RESOIL Blog Generator v14 - Profesional Completo",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "daysInterval": 4
+            }
+          ]
+        }
+      },
+      "id": "dcce9862-1701-44f7-a774-c438d0c4d4d1",
+      "name": "Cada 4 Dias",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1600,
+        400
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "dcce9862-1701-44f7-a774-c438d0c4d4d2",
+      "name": "Ejecutar Manual",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1600,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const servicios = [\n  {\n    id: 1,\n    nombre: \"Guirnaldas LED\",\n    nombreCompleto: \"Guirnaldas LED Profesionales para Eventos\",\n    categoria: \"ILUMINACION\",\n    slug: \"guirnaldas-led-eventos-cdmx\",\n    keywords: [\"renta guirnaldas LED CDMX\", \"guirnaldas para eventos Mexico\", \"luces decorativas bodas\", \"iluminacion eventos CDMX\", \"guirnaldas focos Edison\", \"techo de luces\"],\n    keywordPrincipal: \"renta de guirnaldas LED para eventos en CDMX\",\n    eventos: [\"bodas\", \"XV anos\", \"fiestas en jardin\", \"baby showers\", \"eventos corporativos\"],\n    descripcion: \"Sistemas de guirnaldas LED profesionales con focos tipo Edison que transforman cualquier espacio en un ambiente magico y sofisticado.\",\n    caracteristicas: [\"Focos LED tipo Edison 2700K\", \"Cable resistente a intemperie IP65\", \"Bajo consumo energetico\", \"No generan calor\", \"Vida util 50,000+ horas\"],\n    beneficios: [\"Ambiente romantico instantaneo\", \"Perfectas para fotografia profesional\", \"Instalacion profesional incluida\", \"Tecnico de guardia durante evento\"],\n    especificacionesTecnicas: {\n      \"Temperatura color\": \"2700K (calido)\",\n      \"Certificacion\": \"IP65 exterior\",\n      \"Potencia foco\": \"4W LED\",\n      \"Espaciado focos\": \"30-50cm\",\n      \"Altura instalacion\": \"3.5-4.5 metros\"\n    },\n    urlServicio: \"../iluminacion/guirnaldas.html\",\n    serviciosRelacionados: [\n      {nombre: \"Luces Neon Personalizadas\", url: \"../iluminacion/luces-neon.html\"},\n      {nombre: \"Iluminacion Arquitectonica\", url: \"../iluminacion/luces-arquitectonicas.html\"},\n      {nombre: \"Cascadas LED\", url: \"../iluminacion/cascadas-led.html\"},\n      {nombre: \"Ver Todos los Servicios\", url: \"../renta-de-iluminacion.html\"}\n    ],\n    articulosRelacionados: [\n      {titulo: \"Iluminacion para Bodas en Jardin\", url: \"iluminacion-bodas-jardin.html\", categoria: \"ILUMINACION\", extracto: \"Guia completa sobre como iluminar bodas en espacios exteriores con tecnicas profesionales.\"},\n      {titulo: \"Guirnaldas y Luces Vintage\", url: \"guirnaldas-luces-vintage-eventos.html\", categoria: \"ILUMINACION\", extracto: \"Todo sobre renta de guirnaldas vintage: tipos, instalacion y como crear ambientes magicos.\"},\n      {titulo: \"Proyector de Gobos Personalizado\", url: \"proyector-gobos-personalizado.html\", categoria: \"ILUMINACION\", extracto: \"Proyecta logos, nombres y disenos personalizados en cualquier superficie de tu evento.\"}\n    ],\n    imagenContexto: \"guirnaldas de luces LED tipo Edison colgando sobre mesas elegantes en una boda al aire libre en un jardin mexicano al atardecer\",\n    carpetaImagenes: \"img-guirnaldas\",\n    imagenesGaleria: [\n      \"decoracion-luminosa-eventos.webp\",\n      \"guirnaldas-decorativas-led.webp\",\n      \"guirnaldas-led-decoracion.webp\",\n      \"guirnaldas-luminosas-fiestas.webp\",\n      \"guirnaldas-para-fiestas.webp\",\n      \"iluminacion-ambiental-renta.webp\",\n      \"iluminacion-decorativa-eventos.webp\",\n      \"iluminacion-para-eventos.webp\",\n      \"luces-led-para-eventos.webp\"\n    ],\n    preguntasFAQ: [\n      {pregunta: \"\u00bfCual es la diferencia entre guirnaldas LED y focos tradicionales?\", tema: \"tecnica\"},\n      {pregunta: \"\u00bfCuantos metros de guirnalda necesito para mi evento?\", tema: \"dimensionamiento\"},\n      {pregunta: \"\u00bfLas guirnaldas funcionan si llueve?\", tema: \"condiciones\"},\n      {pregunta: \"\u00bfQue incluye el servicio de instalacion?\", tema: \"servicio\"},\n      {pregunta: \"\u00bfPuedo elegir el color de la luz?\", tema: \"personalizacion\"},\n      {pregunta: \"\u00bfPor que elegir RESOIL para guirnaldas LED?\", tema: \"empresa\"}\n    ]\n  },\n  {\n    id: 2,\n    nombre: \"Luces Neon LED\",\n    nombreCompleto: \"Luces Neon LED Personalizadas para Eventos\",\n    categoria: \"ILUMINACION\",\n    slug: \"luces-neon-personalizadas-eventos\",\n    keywords: [\"luces neon eventos CDMX\", \"letreros neon bodas Mexico\", \"neon LED personalizado\", \"letras luminosas eventos\", \"neon flex bodas\", \"letreros personalizados\"],\n    keywordPrincipal: \"luces neon LED personalizadas para eventos en CDMX\",\n    eventos: [\"bodas\", \"XV anos\", \"eventos corporativos\", \"fiestas tematicas\", \"lanzamientos de producto\"],\n    descripcion: \"Letreros y figuras de neon LED personalizados que crean momentos unicos e inolvidables en cualquier celebracion.\",\n    caracteristicas: [\"Neon flex LED de alta calidad\", \"Disenos personalizados\", \"Bajo consumo energetico\", \"Sin calor ni ruido\", \"Multiples colores disponibles\"],\n    beneficios: [\"Foco de atencion para fotos\", \"Personalizacion total\", \"Instalacion profesional\", \"Mensaje personalizado\"],\n    especificacionesTecnicas: {\n      \"Tipo LED\": \"Neon Flex 2835\",\n      \"Voltaje\": \"12V DC seguro\",\n      \"Colores\": \"15+ opciones\",\n      \"Tamano minimo\": \"50cm\",\n      \"Tamano maximo\": \"200cm+\"\n    },\n    urlServicio: \"../iluminacion/luces-neon.html\",\n    serviciosRelacionados: [\n      {nombre: \"Guirnaldas LED\", url: \"../iluminacion/guirnaldas.html\"},\n      {nombre: \"Iluminacion Arquitectonica\", url: \"../iluminacion/luces-arquitectonicas.html\"},\n      {nombre: \"Proyector de Gobos\", url: \"../iluminacion/proyector-de-gobos.html\"},\n      {nombre: \"Ver Todos los Servicios\", url: \"../renta-de-iluminacion.html\"}\n    ],\n    articulosRelacionados: [\n      {titulo: \"Guirnaldas y Luces Vintage para Eventos\", url: \"guirnaldas-luces-vintage-eventos.html\", categoria: \"ILUMINACION\", extracto: \"Todo sobre renta de guirnaldas vintage: tipos, instalacion y como crear ambientes magicos.\"},\n      {titulo: \"Iluminacion para Bodas en Jardin\", url: \"iluminacion-bodas-jardin.html\", categoria: \"ILUMINACION\", extracto: \"Guia completa sobre como iluminar bodas en espacios exteriores con tecnicas profesionales.\"},\n      {titulo: \"Proyector de Gobos Personalizado\", url: \"proyector-gobos-personalizado.html\", categoria: \"ILUMINACION\", extracto: \"Proyecta logos, nombres y disenos personalizados en cualquier superficie de tu evento.\"}\n    ],\n    imagenContexto: \"letrero de neon LED rosa brillante con texto 'Love' colgado en pared de ladrillo blanco en recepcion de boda elegante\",\n    carpetaImagenes: \"img-neon\",\n    imagenesGaleria: [\n      \"letrero-neon-bodas.webp\",\n      \"letrero-neon-eventos.webp\",\n      \"letrero-neon-personalizado.webp\",\n      \"luces-neon-decorativas.webp\",\n      \"luces-neon-eventos-cdmx.webp\",\n      \"luces-neon-fiestas.webp\",\n      \"neon-led-bodas.webp\",\n      \"neon-led-eventos.webp\",\n      \"renta-luces-neon.webp\"\n    ],\n    preguntasFAQ: [\n      {pregunta: \"\u00bfCual es la diferencia entre neon real y neon LED?\", tema: \"tecnica\"},\n      {pregunta: \"\u00bfCuanto tiempo se tarda en fabricar un letrero personalizado?\", tema: \"proceso\"},\n      {pregunta: \"\u00bfPuedo rentar un letrero o solo se venden?\", tema: \"servicio\"},\n      {pregunta: \"\u00bfQue frases o disenos son los mas populares para bodas?\", tema: \"personalizacion\"},\n      {pregunta: \"\u00bfComo se instala el letrero neon en el venue?\", tema: \"instalacion\"},\n      {pregunta: \"\u00bfPor que elegir RESOIL para letreros neon?\", tema: \"empresa\"}\n    ]\n  },\n  {\n    id: 3,\n    nombre: \"Sonido para Bodas\",\n    nombreCompleto: \"Sistema de Sonido Profesional para Bodas\",\n    categoria: \"SONIDO\",\n    slug: \"sonido-profesional-bodas-guia\",\n    keywords: [\"renta sonido bodas CDMX\", \"bocinas para boda Mexico\", \"audio profesional bodas\", \"sistema sonido eventos\", \"sonido ceremonia boda\", \"audio recepcion\"],\n    keywordPrincipal: \"renta de sonido profesional para bodas en CDMX\",\n    eventos: [\"bodas civiles\", \"bodas religiosas\", \"recepciones de boda\", \"bodas en jardin\", \"bodas en hacienda\"],\n    descripcion: \"Sistemas de sonido profesional con cobertura uniforme y audio cristalino para cada momento de tu boda.\",\n    caracteristicas: [\"Bocinas Line Array profesionales\", \"Microfonos Shure inalambricos\", \"Mezcladora digital\", \"Subwoofers de alta potencia\", \"Tecnico certificado\"],\n    beneficios: [\"Audio cristalino en ceremonia\", \"Potencia para hora loca\", \"Tecnico durante todo el evento\", \"Equipo de respaldo\"],\n    especificacionesTecnicas: {\n      \"Interior\": \"5-10W RMS/persona\",\n      \"Exterior\": \"10-15W RMS/persona\",\n      \"Microfonos\": \"Shure/Sennheiser\",\n      \"Mezcladora\": \"Digital 12+ canales\",\n      \"Subwoofer minimo\": \"15 pulgadas\"\n    },\n    urlServicio: \"../sonido/bocinas-bodas.html\",\n    serviciosRelacionados: [\n      {nombre: \"Sonido para XV Anos\", url: \"../sonido/bocinas-xv-anos.html\"},\n      {nombre: \"Sonido para Fiestas\", url: \"../sonido/bocinas-fiestas.html\"},\n      {nombre: \"Microfonos Inalambricos\", url: \"../sonido/microfonos.html\"},\n      {nombre: \"Ver Todos los Servicios\", url: \"../renta-de-sonido.html\"}\n    ],\n    articulosRelacionados: [\n      {titulo: \"Sonido para Conferencias\", url: \"sonido-conferencias.html\", categoria: \"SONIDO\", extracto: \"Guia completa sobre sistemas de audio para conferencias, congresos y eventos corporativos.\"},\n      {titulo: \"Guirnaldas y Luces Vintage\", url: \"guirnaldas-luces-vintage-eventos.html\", categoria: \"ILUMINACION\", extracto: \"Complementa tu boda con iluminacion decorativa profesional de guirnaldas vintage.\"},\n      {titulo: \"Iluminacion para Bodas en Jardin\", url: \"iluminacion-bodas-jardin.html\", categoria: \"ILUMINACION\", extracto: \"Como iluminar bodas en exteriores con tecnicas profesionales y equipo de calidad.\"}\n    ],\n    imagenContexto: \"sistema de bocinas line array profesionales JBL instaladas discretamente en jardin de hacienda mexicana durante boda elegante al atardecer\",\n    carpetaImagenes: \"img-bocinas-fiestas\",\n    imagenesGaleria: [\n      \"bocinas-para-eventos.webp\",\n      \"bocinas-profesionales-fiestas.webp\",\n      \"equipo-sonido-eventos.webp\",\n      \"renta-bocinas-cdmx.webp\",\n      \"renta-sonido-eventos.webp\",\n      \"sistema-audio-fiestas.webp\",\n      \"sonido-para-eventos.webp\",\n      \"sonido-profesional-cdmx.webp\",\n      \"sonido-profesional-fiestas.webp\"\n    ],\n    preguntasFAQ: [\n      {pregunta: \"\u00bfQue diferencia hay entre bocinas line array y convencionales?\", tema: \"tecnica\"},\n      {pregunta: \"\u00bfCuantos watts necesito segun el numero de invitados?\", tema: \"dimensionamiento\"},\n      {pregunta: \"\u00bfQue tipo de microfono es mejor para la ceremonia?\", tema: \"equipo\"},\n      {pregunta: \"\u00bfEl servicio incluye tecnico de audio?\", tema: \"servicio\"},\n      {pregunta: \"\u00bfQue pasa si el DJ trae su propio equipo?\", tema: \"coordinacion\"},\n      {pregunta: \"\u00bfPor que elegir RESOIL para el audio de mi boda?\", tema: \"empresa\"}\n    ]\n  },\n  {\n    id: 4,\n    nombre: \"Humo Bajo\",\n    nombreCompleto: \"Efecto de Humo Bajo para Primer Baile\",\n    categoria: \"EFECTOS\",\n    slug: \"humo-bajo-primer-baile-bodas\",\n    keywords: [\"humo bajo bodas CDMX\", \"baile en las nubes\", \"efecto humo primer baile\", \"niebla baja eventos\", \"humo bajo pista baile\", \"efecto nubes boda\"],\n    keywordPrincipal: \"efecto de humo bajo para primer baile en bodas CDMX\",\n    eventos: [\"bodas\", \"XV anos\", \"eventos especiales\", \"presentaciones\", \"espectaculos\"],\n    descripcion: \"Efecto espectacular de niebla a nivel del suelo que crea la ilusion de bailar sobre las nubes en tu primer baile.\",\n    caracteristicas: [\"Niebla densa a nivel del suelo\", \"No sube ni dispersa\", \"Seguro y no toxico\", \"Efecto inmediato\", \"Duracion controlada\"],\n    beneficios: [\"Fotos y video espectaculares\", \"Momento magico e inolvidable\", \"Seguro para interiores\", \"Tecnico especializado\"],\n    especificacionesTecnicas: {\n      \"Tipo maquina\": \"Cryo CO2 o hielo seco\",\n      \"Altura niebla\": \"40-60cm del suelo\",\n      \"Duracion efecto\": \"3-5 minutos\",\n      \"Area cobertura\": \"Hasta 100m2\",\n      \"Tiempo preparacion\": \"30 minutos\"\n    },\n    urlServicio: \"../equipos/humo-bajo.html\",\n    serviciosRelacionados: [\n      {nombre: \"Maquina de Burbujas\", url: \"../equipos/maquina-de-burbujas.html\"},\n      {nombre: \"Maquina de Confeti\", url: \"../equipos/maquina-de-confeti.html\"},\n      {nombre: \"Maquina de Humo\", url: \"../equipos/maquina-de-humo.html\"},\n      {nombre: \"Ver Todos los Equipos\", url: \"../equipos.html\"}\n    ],\n    articulosRelacionados: [\n      {titulo: \"Maquinas de Humo para Eventos\", url: \"maquina-humo-eventos-cdmx.html\", categoria: \"EFECTOS\", extracto: \"Guia completa sobre tipos de maquinas de humo y sus aplicaciones en eventos.\"},\n      {titulo: \"Iluminacion para Bodas en Jardin\", url: \"iluminacion-bodas-jardin.html\", categoria: \"ILUMINACION\", extracto: \"Guia completa sobre iluminacion profesional para bodas en espacios exteriores.\"},\n      {titulo: \"Sonido Profesional para Bodas\", url: \"sonido-profesional-bodas-cdmx.html\", categoria: \"SONIDO\", extracto: \"Complementa tu primer baile con audio profesional cristalino y envolvente.\"}\n    ],\n    imagenContexto: \"pareja de novios bailando su primer baile sobre una densa capa de humo bajo blanco que cubre el piso, iluminados por luz dorada suave en salon elegante\",\n    carpetaImagenes: \"img-humo-bajo\",\n    imagenesGaleria: [\n      \"efectos-especiales-humo-bajo.webp\",\n      \"efectos-humo-bajo-profesional.webp\",\n      \"humo-bajo-eventos-corporativos.webp\",\n      \"humo-bajo-fiestas-elegantes.webp\",\n      \"humo-bajo-primer-baile.webp\",\n      \"maquina-humo-bajo-bodas.webp\",\n      \"maquina-humo-seco-eventos.webp\",\n      \"niebla-baja-bodas-cdmx.webp\",\n      \"niebla-baja-eventos.webp\"\n    ],\n    preguntasFAQ: [\n      {pregunta: \"\u00bfCual es la diferencia entre humo bajo y maquina de humo normal?\", tema: \"tecnica\"},\n      {pregunta: \"\u00bfCuanto dura el efecto de humo bajo?\", tema: \"duracion\"},\n      {pregunta: \"\u00bfEs seguro el humo bajo para personas con asma?\", tema: \"seguridad\"},\n      {pregunta: \"\u00bfFunciona el humo bajo en exteriores?\", tema: \"condiciones\"},\n      {pregunta: \"\u00bfQue se necesita para instalar el humo bajo?\", tema: \"requisitos\"},\n      {pregunta: \"\u00bfPor que elegir RESOIL para humo bajo?\", tema: \"empresa\"}\n    ]\n  },\n  {\n    id: 5,\n    nombre: \"Bolas Disco\",\n    nombreCompleto: \"Bolas Disco Profesionales para Fiestas\",\n    categoria: \"ILUMINACION\",\n    slug: \"bolas-disco-profesionales-fiestas\",\n    keywords: [\"bolas disco CDMX\", \"esfera disco eventos\", \"bola espejos fiesta\", \"iluminacion retro eventos\", \"bola disco bodas\", \"esfera giratoria\"],\n    keywordPrincipal: \"renta de bolas disco profesionales para fiestas en CDMX\",\n    eventos: [\"fiestas tematicas\", \"XV anos\", \"bodas\", \"eventos retro\", \"fiestas corporativas\", \"cumpleanos\"],\n    descripcion: \"Clasicas bolas disco con espejos de alta calidad y motor silencioso para crear el ambiente perfecto de fiesta.\",\n    caracteristicas: [\"Espejos de alta reflectividad\", \"Motor silencioso incluido\", \"Varios tamanos disponibles\", \"Spot de luz incluido\", \"Instalacion profesional\"],\n    beneficios: [\"Ambiente de fiesta instantaneo\", \"Efecto visual espectacular\", \"Perfecto para fotos\", \"Nostalgia y diversion\"],\n    especificacionesTecnicas: {\n      \"Tamano pequeno\": \"30cm diametro\",\n      \"Tamano mediano\": \"50cm diametro\",\n      \"Tamano grande\": \"75-100cm diametro\",\n      \"Velocidad rotacion\": \"2-6 RPM\",\n      \"Peso maximo\": \"15kg\"\n    },\n    urlServicio: \"../equipos/bolas-disco.html\",\n    serviciosRelacionados: [\n      {nombre: \"Maquina de Humo\", url: \"../equipos/maquina-de-humo.html\"},\n      {nombre: \"Luces Roboticas\", url: \"../iluminacion/luces-roboticas.html\"},\n      {nombre: \"Sonido para Fiestas\", url: \"../sonido/bocinas-fiestas.html\"},\n      {nombre: \"Ver Todos los Equipos\", url: \"../equipos.html\"}\n    ],\n    articulosRelacionados: [\n      {titulo: \"Guirnaldas y Luces Vintage\", url: \"guirnaldas-luces-vintage-eventos.html\", categoria: \"ILUMINACION\", extracto: \"Combina bolas disco con guirnaldas vintage para un look retro-moderno espectacular.\"},\n      {titulo: \"Maquinas de Humo para Eventos\", url: \"maquina-humo-eventos-cdmx.html\", categoria: \"EFECTOS\", extracto: \"El humo hace que los reflejos de la bola disco se vean aun mas espectaculares.\"},\n      {titulo: \"Bocinas para Fiestas\", url: \"bocinas-fiestas.html\", categoria: \"SONIDO\", extracto: \"Complementa la iluminacion con audio profesional para una fiesta inolvidable.\"}\n    ],\n    imagenContexto: \"gran bola disco de espejos girando y reflejando multiples haces de luz en pista de baile llena de gente celebrando en fiesta elegante\",\n    carpetaImagenes: \"img-bolas-disco\",\n    imagenesGaleria: [\n      \"bolas-disco-eventos.webp\",\n      \"bolas-disco-iluminacion-eventos.webp\",\n      \"bolas-disco-rotatorias.webp\",\n      \"bolas-espejo-eventos.webp\",\n      \"efectos-bolas-disco.webp\",\n      \"esfera-disco-fiestas.webp\",\n      \"iluminacion-bolas-disco.webp\",\n      \"renta-bolas-disco-profesionales.webp\",\n      \"renta-de-bolas-disco.webp\"\n    ],\n    preguntasFAQ: [\n      {pregunta: \"\u00bfQue tamano de bola disco necesito para mi evento?\", tema: \"dimensionamiento\"},\n      {pregunta: \"\u00bfLa bola disco incluye la luz que la ilumina?\", tema: \"equipo\"},\n      {pregunta: \"\u00bfComo se instala la bola disco en el techo?\", tema: \"instalacion\"},\n      {pregunta: \"\u00bfLa bola disco funciona sin humo?\", tema: \"funcionamiento\"},\n      {pregunta: \"\u00bfPuedo combinar bola disco con otras luces?\", tema: \"combinacion\"},\n      {pregunta: \"\u00bfPor que elegir RESOIL para bolas disco?\", tema: \"empresa\"}\n    ]\n  },\n  {\n    id: 6,\n    nombre: \"Maquina de Burbujas\",\n    nombreCompleto: \"Maquina de Burbujas Profesional para Eventos\",\n    categoria: \"EFECTOS\",\n    slug: \"maquina-burbujas-profesional-eventos\",\n    keywords: [\"maquina burbujas eventos CDMX\", \"burbujas bodas Mexico\", \"efectos especiales eventos\", \"burbujas profesionales fiestas\", \"burbujas primer baile\", \"efecto burbujas\"],\n    keywordPrincipal: \"renta de maquina de burbujas profesional para eventos en CDMX\",\n    eventos: [\"bodas\", \"XV anos\", \"fiestas infantiles\", \"baby showers\", \"eventos corporativos\", \"lanzamientos\"],\n    descripcion: \"Maquinas de alta produccion que crean miles de burbujas para momentos magicos e inolvidables en tu evento.\",\n    caracteristicas: [\"Alta produccion de burbujas\", \"Liquido profesional incluido\", \"Burbujas de larga duracion\", \"Control de intensidad\", \"Operacion silenciosa\"],\n    beneficios: [\"Momento magico garantizado\", \"Perfecto para fotos y video\", \"Seguro para todas las edades\", \"Efecto espectacular con luz\"],\n    especificacionesTecnicas: {\n      \"Produccion\": \"3,000+ burbujas/min\",\n      \"Alcance\": \"Hasta 8 metros\",\n      \"Tanque\": \"2-5 litros\",\n      \"Autonomia\": \"2-4 horas\",\n      \"Potencia\": \"80-150W\"\n    },\n    urlServicio: \"../equipos/maquina-de-burbujas.html\",\n    serviciosRelacionados: [\n      {nombre: \"Humo Bajo\", url: \"../equipos/humo-bajo.html\"},\n      {nombre: \"Maquina de Confeti\", url: \"../equipos/maquina-de-confeti.html\"},\n      {nombre: \"Maquina de Humo\", url: \"../equipos/maquina-de-humo.html\"},\n      {nombre: \"Ver Todos los Equipos\", url: \"../equipos.html\"}\n    ],\n    articulosRelacionados: [\n      {titulo: \"Maquinas de Humo para Eventos\", url: \"maquina-humo-eventos-cdmx.html\", categoria: \"EFECTOS\", extracto: \"Combina burbujas con humo para un efecto visual doblemente espectacular.\"},\n      {titulo: \"Guirnaldas y Luces Vintage\", url: \"guirnaldas-luces-vintage-eventos.html\", categoria: \"ILUMINACION\", extracto: \"Las burbujas brillan espectacularmente bajo la luz de guirnaldas vintage.\"},\n      {titulo: \"Iluminacion para Bodas\", url: \"iluminacion-bodas-jardin.html\", categoria: \"ILUMINACION\", extracto: \"Guia completa de iluminacion para complementar efectos especiales en bodas.\"}\n    ],\n    imagenContexto: \"cientos de burbujas de jabon flotando sobre pista de baile en boda al aire libre al atardecer con luz dorada atravesandolas\",\n    carpetaImagenes: \"img-burbujas\",\n    imagenesGaleria: [\n      \"burbujas-bodas-cdmx.webp\",\n      \"burbujas-eventos-profesionales.webp\",\n      \"burbujas-fiestas-infantiles.webp\",\n      \"efectos-burbujas-eventos.webp\",\n      \"maquina-burbujas-bodas.webp\",\n      \"maquina-burbujas-eventos.webp\",\n      \"maquina-burbujas-profesional.webp\",\n      \"renta-burbujas-cdmx.webp\",\n      \"renta-maquina-burbujas.webp\"\n    ],\n    preguntasFAQ: [\n      {pregunta: \"\u00bfLas burbujas manchan la ropa o el vestido de novia?\", tema: \"seguridad\"},\n      {pregunta: \"\u00bfCuantas maquinas de burbujas necesito para mi evento?\", tema: \"dimensionamiento\"},\n      {pregunta: \"\u00bfFuncionan las burbujas en exterior con viento?\", tema: \"condiciones\"},\n      {pregunta: \"\u00bfEl liquido de burbujas es seguro para ninos?\", tema: \"seguridad\"},\n      {pregunta: \"\u00bfEn que momento del evento se usan las burbujas?\", tema: \"uso\"},\n      {pregunta: \"\u00bfPor que elegir RESOIL para burbujas?\", tema: \"empresa\"}\n    ]\n  }\n];\n\n// Tabla de articulos existentes para referencias cruzadas\nconst articulosExistentes = [\n  {slug: \"sonido-bodas-guia-completa\", titulo: \"Guia Completa del Audio para Bodas\", categoria: \"SONIDO\"},\n  {slug: \"sonido-profesional-bodas-cdmx\", titulo: \"Equipos de Sonido Profesional para Bodas\", categoria: \"SONIDO\"},\n  {slug: \"sonido-conferencias\", titulo: \"Sonido para Conferencias CDMX\", categoria: \"SONIDO\"},\n  {slug: \"bocinas-fiestas\", titulo: \"Bocinas para Fiestas\", categoria: \"SONIDO\"},\n  {slug: \"iluminacion-bodas-jardin\", titulo: \"Iluminacion para Bodas en Jardin\", categoria: \"ILUMINACION\"},\n  {slug: \"guirnaldas-luces-vintage-eventos\", titulo: \"Guirnaldas y Luces Vintage\", categoria: \"ILUMINACION\"},\n  {slug: \"renta-guirnaldas-led-cdmx\", titulo: \"Renta de Guirnaldas LED CDMX\", categoria: \"ILUMINACION\"},\n  {slug: \"maquina-humo-eventos-cdmx\", titulo: \"Maquinas de Humo para Eventos\", categoria: \"EFECTOS\"},\n  {slug: \"proyector-gobos\", titulo: \"Monograma de Luz para Bodas\", categoria: \"ILUMINACION\"},\n  {slug: \"proyector-gobos-personalizado\", titulo: \"Proyector de Gobos Personalizado\", categoria: \"ILUMINACION\"}\n];\n\nconst staticData = $getWorkflowStaticData('global');\nif (!staticData.serviciosUsados) staticData.serviciosUsados = [];\n\nconst idsUsados = staticData.serviciosUsados;\nlet idsDisponibles = servicios.map(s => s.id).filter(id => !idsUsados.includes(id));\n\nif (idsDisponibles.length === 0) {\n  staticData.serviciosUsados = [];\n  idsDisponibles = servicios.map(s => s.id);\n}\n\nconst idSeleccionado = idsDisponibles[Math.floor(Math.random() * idsDisponibles.length)];\nstaticData.serviciosUsados.push(idSeleccionado);\n\nconst servicioSeleccionado = servicios.find(s => s.id === idSeleccionado);\nconst timestamp = Date.now();\n\nreturn [{\n  json: {\n    servicio: servicioSeleccionado,\n    articulosExistentes: articulosExistentes,\n    slugFinal: servicioSeleccionado.slug,\n    filename: servicioSeleccionado.slug + '.html',\n    imagenFilename: servicioSeleccionado.slug + '-' + timestamp + '.webp',\n    baseUrl: 'https://rentadesonidoeiluminacion.com.mx',\n    whatsappNumber: '5215578960091',\n    empresa: {\n      nombre: 'RESOIL',\n      nombreCompleto: 'Renta de Sonido e Iluminacion',\n      experiencia: 'mas de 15 anos',\n      eventosRealizados: '5,000+',\n      cobertura: 'CDMX y Estado de Mexico',\n      telefono: '+52 55 7896 0091',\n      email: 'contacto@rentadesonidoeiluminacion.com.mx',\n      direccion: 'Montecito 38, Napoles, Benito Juarez, 03810, CDMX'\n    }\n  }\n}];"
+      },
+      "id": "50e3b3f6-d1b0-4a58-b6e8-8e64aa6a7b69",
+      "name": "Selector Servicio",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1360,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\nconst s = data.servicio;\nconst e = data.empresa;\n\n// Prompt de sistema profesional basado en DOCUMENTO-ARTICULOS.md v2.0\nconst promptSistema = `Eres un REDACTOR SEO EXPERTO y COPYWRITER PROFESIONAL especializado en articulos para blogs de empresas de eventos en Mexico. Tu trabajo es crear contenido de ALTO RENDIMIENTO que posicione en Google y convierta visitantes en clientes.\n\n=== REGLAS ABSOLUTAS (NUNCA LAS ROMPAS) ===\n\n1. CONTENIDO ATEMPORAL:\n   - JAMAS menciones anos (2024, 2025, etc.)\n   - JAMAS uses \"este ano\", \"actualmente\", \"recientemente\"\n   - USA: \"con mas de 15 anos de experiencia\", \"nuestra trayectoria\"\n\n2. SIN PRECIOS:\n   - JAMAS menciones precios, costos, tarifas, inversiones o montos\n   - USA: \"solicita cotizacion personalizada\", \"configuraciones para diferentes presupuestos\"\n\n3. FORMATO DE CONTENIDO:\n   - Parrafos fluidos de 3-5 oraciones bien conectadas\n   - Negritas estrategicas con <strong> para terminos tecnicos y datos clave\n   - Maximo 15% del texto en negritas\n   - Contenido total MINIMO 2,500 palabras\n\n4. ESTRUCTURA SEO:\n   - Solo UN H1 (en hero)\n   - H2 para secciones principales (6-8 secciones)\n   - H3 para subsecciones (2-4 por H2)\n   - Keywords naturalmente distribuidas\n\n5. TONO RESOIL:\n   - Experto pero accesible\n   - Confiable (respaldado por datos: 15+ anos, 5,000+ eventos)\n   - Directo y practico\n   - Profesional sin emojis\n   - Orientado a soluciones\n\n6. EVITAR:\n   - Superlativos vacios (\"el mejor\", \"increible\", \"espectacular\")\n   - Lenguaje de venta agresiva\n   - Jerga tecnica sin explicacion\n   - Contenido generico\n\n=== RESPUESTA ===\nSIEMPRE responde UNICAMENTE con JSON valido. Sin markdown, sin texto adicional, sin explicaciones.`;\n\n// Construir especificaciones tecnicas como texto\nlet especsTecnicas = '';\nif (s.especificacionesTecnicas) {\n  const specs = Object.entries(s.especificacionesTecnicas);\n  especsTecnicas = specs.map(([k, v]) => `${k}: ${v}`).join(', ');\n}\n\nconst promptUsuario = `Genera un articulo SEO PROFESIONAL completo sobre: \"${s.nombreCompleto}\"\n\n=== DATOS DEL SERVICIO ===\n- Nombre: ${s.nombre}\n- Categoria: ${s.categoria}\n- Keyword Principal: ${s.keywordPrincipal}\n- Keywords Secundarias: ${s.keywords.join(', ')}\n- Descripcion: ${s.descripcion}\n- Tipos de Eventos: ${s.eventos.join(', ')}\n- Caracteristicas: ${s.caracteristicas.join(', ')}\n- Beneficios: ${s.beneficios.join(', ')}\n- Especificaciones Tecnicas: ${especsTecnicas}\n\n=== EMPRESA RESOIL ===\n- Nombre: ${e.nombre} (${e.nombreCompleto})\n- Experiencia: ${e.experiencia}\n- Eventos realizados: ${e.eventosRealizados}\n- Cobertura: ${e.cobertura}\n\n=== PREGUNTAS FAQ OBLIGATORIAS ===\n${s.preguntasFAQ.map((faq, i) => `${i+1}. ${faq.pregunta} (tema: ${faq.tema})`).join('\\n')}\n\n=== ESTRUCTURA JSON REQUERIDA ===\n\n{\n  \"seo\": {\n    \"titulo\": \"[Keyword Principal] CDMX | [Tipo Contenido] | RESOIL (55-65 chars)\",\n    \"metaDescription\": \"[Descripcion persuasiva 150-160 chars con keyword y beneficio]\",\n    \"metaKeywords\": \"[6-8 keywords separadas por coma]\"\n  },\n  \"breadcrumbName\": \"[Nombre corto para breadcrumb]\",\n  \"hero\": {\n    \"h1\": \"[Titulo H1 impactante 50-70 chars con keyword]\",\n    \"tagline\": \"[2-3 oraciones expandiendo H1, mencionando expertise RESOIL]\",\n    \"infoBox\": {\n      \"parrafo1\": \"[Gancho con estadistica o pregunta + problema que resuelve]\",\n      \"parrafo2\": \"[Propuesta de valor + keywords en negrita con <strong>]\"\n    }\n  },\n  \"imagenAlt\": \"[Descripcion especifica de imagen con keywords - RESOIL]\",\n  \"imagenCaption\": \"[Descripcion breve de la imagen]\",\n  \"introduccion\": {\n    \"parrafo1\": \"<p class='article-intro'><strong>[Pregunta retorica o afirmacion impactante]</strong> [Desarrollo del problema/oportunidad 3-4 oraciones]</p>\",\n    \"parrafo2\": \"<p>En ${e.nombre}, con ${e.experiencia} especializandonos en [servicio], hemos equipado ${e.eventosRealizados} eventos. [2-3 oraciones sobre experiencia y lo que aprendera el lector]</p>\"\n  },\n  \"secciones\": [\n    {\n      \"h2\": \"[Titulo seccion con keyword - pregunta o afirmacion]\",\n      \"introParrafo\": \"<p>[Parrafo introductorio 3-4 oraciones]</p>\",\n      \"subsecciones\": [\n        {\n          \"h3\": \"[Subtitulo especifico]\",\n          \"contenido\": \"<p><strong>[Termino tecnico]:</strong> [Explicacion detallada 4-5 oraciones con datos especificos]. <strong>[Otro termino]:</strong> [Mas detalles].</p><p>[Parrafo adicional si necesario]</p>\"\n        }\n      ]\n    }\n  ],\n  \"faq\": [\n    {\n      \"pregunta\": \"[Pregunta exacta de la lista]\",\n      \"respuesta\": \"[Respuesta completa 50-100 palabras con <strong>keywords</strong> estrategicas]\"\n    }\n  ],\n  \"cta\": {\n    \"titulo\": \"[Titulo CTA invitando a accion]\",\n    \"parrafo1\": \"[Invitacion + beneficio de contactar + sin compromiso]\",\n    \"parrafo2\": \"<strong>Incluimos en tu cotizacion:</strong> [Lista de lo que recibiran]\",\n    \"botonPrimario\": \"[Texto boton WhatsApp]\",\n    \"botonSecundario\": \"[Texto boton formulario]\",\n    \"mensajeWhatsApp\": \"[Mensaje personalizado para WhatsApp sin URL-encode]\"\n  },\n  \"sidebar\": {\n    \"especificacionesRapidas\": [\n      {\"etiqueta\": \"[Dato 1]\", \"valor\": \"[Valor 1]\"},\n      {\"etiqueta\": \"[Dato 2]\", \"valor\": \"[Valor 2]\"},\n      {\"etiqueta\": \"[Dato 3]\", \"valor\": \"[Valor 3]\"},\n      {\"etiqueta\": \"[Dato 4]\", \"valor\": \"[Valor 4]\"},\n      {\"etiqueta\": \"[Dato 5]\", \"valor\": \"[Valor 5]\"}\n    ],\n    \"infoAdicional\": {\n      \"titulo\": \"[Titulo: Caracteristicas / Checklist / Datos Tecnicos]\",\n      \"items\": [\n        {\"etiqueta\": \"[Item 1]\", \"valor\": \"[Detalle]\"},\n        {\"etiqueta\": \"[Item 2]\", \"valor\": \"[Detalle]\"},\n        {\"etiqueta\": \"[Item 3]\", \"valor\": \"[Detalle]\"}\n      ]\n    }\n  }\n}\n\n=== REQUISITOS DE SECCIONES ===\n\nGenera EXACTAMENTE 6-7 secciones con esta estructura:\n\n1. \"Que son/es [Servicio]: Definicion y Funcionamiento\"\n   - Definicion clara y contexto\n   - Componentes del sistema\n   - Como funciona\n\n2. \"Tipos de [Servicio] Disponibles\"\n   - Variantes y opciones\n   - Diferencias tecnicas\n   - Recomendaciones por uso\n\n3. \"Eventos Ideales para [Servicio]\"\n   - Bodas (subseccion detallada)\n   - XV Anos (subseccion)\n   - Eventos corporativos (subseccion)\n   - Otros eventos\n\n4. \"Ventajas de Rentar vs Comprar [Servicio]\"\n   - Beneficios economicos\n   - Ventajas tecnicas\n   - Servicio profesional incluido\n\n5. \"Proceso de Instalacion Profesional\"\n   - Visita tecnica previa\n   - Instalacion dia del evento\n   - Tecnico de guardia\n\n6. \"Por Que Elegir ${e.nombre} para [Servicio]\"\n   - Experiencia comprobada\n   - Equipo premium\n   - Servicio integral\n   - Garantia total\n\n7. \"Consejos de Experto para [Servicio]\" (opcional)\n   - Tips practicos\n   - Errores comunes a evitar\n\n=== REQUISITOS FAQ ===\n\nGenera EXACTAMENTE 6 preguntas y respuestas basadas en las preguntas proporcionadas.\nCada respuesta debe:\n- Comenzar con respuesta directa\n- Incluir informacion practica\n- Usar <strong> para keywords\n- Tener 50-100 palabras\n\n=== IMPORTANTE ===\n- El contenido total debe ser MINIMO 2,500 palabras\n- Cada seccion H2 debe tener 300-500 palabras\n- Usa datos tecnicos especificos, no generalidades\n- Incluye ejemplos practicos y recomendaciones\n- NO uses listas con bullets - usa parrafos con negritas`;\n\nconst chatGPTBody = {\n  model: \"gpt-4o\",\n  messages: [\n    { role: \"system\", content: promptSistema },\n    { role: \"user\", content: promptUsuario }\n  ],\n  temperature: 0.7,\n  max_tokens: 10000,\n  response_format: { type: \"json_object\" }\n};\n\nreturn [{json: {...data, chatGPTBody: chatGPTBody}}];"
+      },
+      "id": "d5a13764-11ba-438d-a784-632d4ff11c8b",
+      "name": "Constructor Prompt Pro",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1120,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.chatGPTBody }}",
+        "options": {
+          "timeout": 180000
+        }
+      },
+      "id": "65eaca11-96ad-4445-83b1-5aa66f85c19b",
+      "name": "ChatGPT API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -880,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 10000
+    },
+    {
+      "parameters": {
+        "jsCode": "const respuesta = $input.first().json;\nconst dataOriginal = $('Constructor Prompt Pro').first().json;\n\nlet contenido;\ntry {\n  let texto = respuesta.choices[0].message.content;\n  texto = texto.replace(/```json\\n?/gi, '').replace(/```\\n?/gi, '').trim();\n  contenido = JSON.parse(texto);\n} catch (e) {\n  throw new Error('Error parseando respuesta de ChatGPT: ' + e.message);\n}\n\n// Validaciones estrictas\nconst validaciones = [\n  { campo: 'seo', mensaje: 'Falta seccion SEO' },\n  { campo: 'seo.titulo', mensaje: 'Falta titulo SEO' },\n  { campo: 'seo.metaDescription', mensaje: 'Falta meta description' },\n  { campo: 'hero', mensaje: 'Falta seccion Hero' },\n  { campo: 'hero.h1', mensaje: 'Falta H1 del hero' },\n  { campo: 'hero.tagline', mensaje: 'Falta tagline del hero' },\n  { campo: 'hero.infoBox', mensaje: 'Falta infoBox del hero' },\n  { campo: 'introduccion', mensaje: 'Falta introduccion' },\n  { campo: 'secciones', mensaje: 'Faltan secciones' },\n  { campo: 'faq', mensaje: 'Falta FAQ' },\n  { campo: 'cta', mensaje: 'Falta CTA' },\n  { campo: 'sidebar', mensaje: 'Falta sidebar' }\n];\n\nfor (const v of validaciones) {\n  const campos = v.campo.split('.');\n  let valor = contenido;\n  for (const c of campos) {\n    valor = valor?.[c];\n  }\n  if (!valor) {\n    throw new Error(v.mensaje);\n  }\n}\n\n// Validar secciones minimas\nif (!contenido.secciones || contenido.secciones.length < 5) {\n  throw new Error('Se requieren minimo 5 secciones de contenido');\n}\n\n// Validar FAQ\nif (!contenido.faq || contenido.faq.length < 6) {\n  throw new Error('Se requieren exactamente 6 preguntas FAQ');\n}\n\nreturn [{json: {...dataOriginal, contenido: contenido}}];"
+      },
+      "id": "f21320d8-fabd-411f-9a79-da6a84d8fd32",
+      "name": "Validar Respuesta",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -640,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\nconst s = data.servicio;\nconst c = data.contenido;\n\n// Mapeo de contextos visuales por categoria y servicio\nconst contextosVisuales = {\n  'Guirnaldas LED': {\n    escena: 'elegant outdoor wedding reception at a luxury Mexican hacienda at golden hour, with hundreds of warm Edison LED string lights (2700K warm white) creating a magical canopy overhead, draped between wooden beams',\n    elementos: 'beautifully decorated tables with white linens, crystal glassware reflecting the warm lights, lush greenery, guests in formal attire celebrating',\n    ambiente: 'romantic, sophisticated, warm amber glow, fairy tale atmosphere',\n    tecnico: 'professional installation with cables perfectly aligned, lights at 3.5-4 meters height'\n  },\n  'Luces Neon LED': {\n    escena: 'modern wedding reception with a stunning custom pink neon LED sign displaying \"Better Together\" mounted on an elegant white brick wall behind the sweetheart table',\n    elementos: 'the neon sign casting a beautiful pink glow, floral arrangements, champagne glasses, elegant decor',\n    ambiente: 'contemporary, Instagram-worthy, romantic pink ambient lighting',\n    tecnico: 'clean neon flex LED installation, vibrant colors, no visible wiring'\n  },\n  'Sonido para Bodas': {\n    escena: 'professional audio setup at an upscale outdoor wedding in a Mexican garden venue, with discreet JBL line array speakers on professional stands',\n    elementos: 'elegant wedding reception in progress, professional audio technician at digital mixing console, wireless microphones on table, guests enjoying perfect audio',\n    ambiente: 'sophisticated, professional, seamless integration with decor',\n    tecnico: 'line array speakers properly angled, subwoofers hidden, cables organized, Yamaha digital mixer'\n  },\n  'Humo Bajo': {\n    escena: 'magical first dance moment at luxury wedding reception, with bride and groom dancing on a thick layer of low-lying fog that covers the entire dance floor',\n    elementos: 'the couple in wedding attire appearing to float on clouds, warm spotlights creating dramatic effect, guests watching in awe',\n    ambiente: 'dreamlike, ethereal, romantic, cinematic lighting',\n    tecnico: 'dense white fog staying perfectly at floor level (40-60cm), not rising, professional cryo effect'\n  },\n  'Bolas Disco': {\n    escena: 'vibrant dance floor at an elegant party with a large professional mirror ball (disco ball) hanging from ceiling, reflecting hundreds of light beams across the venue',\n    elementos: 'guests dancing, professional lighting hitting the mirror ball, light patterns on walls and floor, festive atmosphere',\n    ambiente: 'energetic, celebratory, retro-glam, party atmosphere',\n    tecnico: 'large 50cm mirror ball with professional motor, focused spotlight creating maximum reflections'\n  },\n  'Maquina de Burbujas': {\n    escena: 'enchanting moment at outdoor wedding with hundreds of iridescent soap bubbles floating through the air as bride and groom exit ceremony',\n    elementos: 'sunlight catching bubbles creating rainbow reflections, happy couple, guests cheering, garden setting',\n    ambiente: 'joyful, whimsical, magical, celebratory',\n    tecnico: 'professional bubble machine producing consistent stream of long-lasting bubbles'\n  }\n};\n\n// Obtener contexto especifico o usar el general\nconst ctx = contextosVisuales[s.nombre] || {\n  escena: s.imagenContexto,\n  elementos: 'elegant event decorations, professional equipment, happy guests',\n  ambiente: 'sophisticated, professional, high-end event',\n  tecnico: 'professional installation, premium equipment'\n};\n\n// Construir prompt hiperrealista profesional\nconst dallePrompt = `PHOTOREALISTIC PROFESSIONAL EVENT PHOTOGRAPHY:\n\nSCENE: ${ctx.escena}\n\nELEMENTS: ${ctx.elementos}\n\nATMOSPHERE: ${ctx.ambiente}\n\nTECHNICAL DETAILS: ${ctx.tecnico}\n\nPHOTOGRAPHY SPECIFICATIONS:\n- Shot with Canon EOS R5, 35mm f/1.4L lens\n- Natural golden hour lighting with soft warm tones\n- Shallow depth of field with creamy bokeh background\n- Professional color grading: warm highlights, rich shadows\n- 8K ultra high resolution, magazine editorial quality\n- Photojournalistic candid style, authentic moment captured\n- NO text, NO watermarks, NO logos, NO artificial elements\n- Real Mexican luxury venue setting\n- Award-winning wedding photography aesthetic\n- Suitable for premium events company portfolio\n\nSTYLE: Hyperrealistic photograph that could appear in Martha Stewart Weddings or Vogue Mexico. The image must look 100% like a real professional photograph, not AI-generated.`;\n\nconst dalleBody = {\n  model: \"dall-e-3\",\n  prompt: dallePrompt,\n  n: 1,\n  size: \"1792x1024\",\n  quality: \"hd\",\n  style: \"natural\"\n};\n\nreturn [{json: {...data, dalleBody: dalleBody, dallePrompt: dallePrompt}}];"
+      },
+      "id": "90917a12-dffe-45f4-ab1c-8012969b3b67",
+      "name": "Constructor DALL-E Pro",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -400,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.dalleBody }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "15c6b11a-5cd4-40ca-8947-5d02759792ca",
+      "name": "DALL-E 3 API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 15000
+    },
+    {
+      "parameters": {
+        "jsCode": "const dalleResponse = $input.first().json;\nconst dataOriginal = $('Constructor DALL-E Pro').first().json;\n\nif (!dalleResponse.data || !dalleResponse.data[0] || !dalleResponse.data[0].url) {\n  throw new Error('DALL-E no devolvio imagen valida');\n}\n\nreturn [{json: {...dataOriginal, imagenUrl: dalleResponse.data[0].url}}];"
+      },
+      "id": "d577b13d-f72c-4911-8c11-8427ad8fe45c",
+      "name": "Validar DALL-E",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        80,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.imagenUrl }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          },
+          "timeout": 60000
+        }
+      },
+      "id": "5127c919-8ebb-48e2-89c2-26ddc1d23cfc",
+      "name": "Descargar Imagen",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        320,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first();\nconst dataOriginal = $('Validar DALL-E').first().json;\n\nreturn [{\n  json: dataOriginal,\n  binary: {\n    data: {\n      data: input.binary.data.data,\n      mimeType: 'image/webp',\n      fileName: dataOriginal.imagenFilename\n    }\n  }\n}];"
+      },
+      "id": "77d1f3ca-1613-4b61-b92a-db8ef2008071",
+      "name": "Preparar Imagen FTP",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "path": "=/website_d2c4cb8e/img/blog/{{ $json.imagenFilename }}"
+      },
+      "id": "8a4f834e-10fe-43e4-97b7-343f3c62c3f3",
+      "name": "FTP Subir Imagen",
+      "type": "n8n-nodes-base.ftp",
+      "typeVersion": 1,
+      "position": [
+        800,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "ftp": {
+          "id": "ftp-resoil",
+          "name": "FTP RESOIL"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\nconst s = data.servicio;\nconst c = data.contenido;\nconst e = data.empresa;\nconst imgPath = '../img/blog/' + data.imagenFilename;\nconst imgUrl = data.baseUrl + '/img/blog/' + data.imagenFilename;\nconst articleUrl = data.baseUrl + '/blog/' + data.filename;\n\n// URL-encode del mensaje de WhatsApp\nconst whatsappMsg = encodeURIComponent(c.cta?.mensajeWhatsApp || 'Hola, me interesa informacion sobre ' + s.nombre + ' para mi evento');\n\n// ============================================\n// CONSTRUIR SECCIONES HTML\n// ============================================\nlet seccionesHTML = '';\nif (c.secciones && c.secciones.length > 0) {\n  c.secciones.forEach(sec => {\n    seccionesHTML += `            <section class=\"article-section\">\\n              <h2>${sec.h2}</h2>\\n\\n              ${sec.introParrafo || ''}\\n`;\n    if (sec.subsecciones && sec.subsecciones.length > 0) {\n      sec.subsecciones.forEach(sub => {\n        seccionesHTML += `\\n              <h3>${sub.h3}</h3>\\n\\n              ${sub.contenido}\\n`;\n      });\n    }\n    seccionesHTML += `            </section>\\n\\n`;\n  });\n}\n\n// ============================================\n// CONSTRUIR FAQ HTML Y SCHEMA\n// ============================================\nlet faqItemsHTML = '';\nlet faqSchemaItems = [];\n\nif (c.faq && c.faq.length > 0) {\n  c.faq.forEach((faq, index) => {\n    const isFirst = index === 0;\n    faqItemsHTML += `\n                <div class=\"faq-item${isFirst ? ' active' : ''}\">\n                  <button class=\"faq-question\" aria-expanded=\"${isFirst ? 'true' : 'false'}\">\n                    <span>${faq.pregunta}</span>\n                    <span class=\"faq-icon\">+</span>\n                  </button>\n                  <div class=\"faq-answer\"${isFirst ? ' style=\"display:block;\"' : ''}>\n                    <p>${faq.respuesta}</p>\n                  </div>\n                </div>`;\n    \n    faqSchemaItems.push({\n      \"@type\": \"Question\",\n      \"name\": faq.pregunta,\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": faq.respuesta.replace(/<[^>]*>/g, '')\n      }\n    });\n  });\n}\n\nconst faqSchema = JSON.stringify({\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": faqSchemaItems\n}, null, 2);\n\n// ============================================\n// CONSTRUIR SIDEBAR\n// ============================================\nlet especsRapidasHTML = '';\nif (c.sidebar?.especificacionesRapidas) {\n  c.sidebar.especificacionesRapidas.forEach(spec => {\n    especsRapidasHTML += `                <li><strong>${spec.etiqueta}:</strong> ${spec.valor}</li>\\n`;\n  });\n}\n\nlet infoAdicionalHTML = '';\nif (c.sidebar?.infoAdicional?.items) {\n  infoAdicionalHTML = `\n            <div class=\"sidebar-box\">\n              <h3>${c.sidebar.infoAdicional.titulo}</h3>\n              <ul class=\"sidebar-list\">\\n`;\n  c.sidebar.infoAdicional.items.forEach(item => {\n    infoAdicionalHTML += `                <li><strong>${item.etiqueta}:</strong> ${item.valor}</li>\\n`;\n  });\n  infoAdicionalHTML += `              </ul>\n            </div>`;\n}\n\n// Servicios relacionados sidebar\nlet serviciosRelHTML = '';\nif (s.serviciosRelacionados && s.serviciosRelacionados.length > 0) {\n  s.serviciosRelacionados.forEach(srv => {\n    serviciosRelHTML += `                <li><a href=\"${srv.url}\">${srv.nombre}</a></li>\\n`;\n  });\n}\n\n// ============================================\n// CONSTRUIR ARTICULOS RELACIONADOS\n// ============================================\nlet articulosRelHTML = '';\nif (s.articulosRelacionados && s.articulosRelacionados.length > 0) {\n  s.articulosRelacionados.forEach(art => {\n    articulosRelHTML += `\n            <article class=\"related-article-card\">\n              <div class=\"related-article-content\">\n                <div class=\"related-article-category\">${art.categoria}</div>\n                <h3 class=\"related-article-title\">\n                  <a href=\"${art.url}\">${art.titulo}</a>\n                </h3>\n                <p class=\"related-article-excerpt\">\n                  ${art.extracto}\n                </p>\n                <a href=\"${art.url}\" class=\"related-article-link\">\n                  Leer articulo \u2192\n                </a>\n              </div>\n            </article>\\n`;\n  });\n}\n\nconst breadcrumbName = c.breadcrumbName || s.nombre;\n\n// ============================================\n// CONSTRUIR GALERIA CON IMAGENES REALES\n// ============================================\nlet galeriaHTML = '';\nconst carpetaImg = s.carpetaImagenes || 'img-index';\nconst imagenesGaleria = s.imagenesGaleria || [];\nconst altTexts = [\n  s.nombre + ' en boda elegante CDMX - RESOIL',\n  s.nombre + ' para XV anos profesional',\n  s.nombre + ' evento corporativo Mexico',\n  'Instalacion profesional ' + s.nombre + ' RESOIL',\n  s.nombre + ' en jardin de eventos',\n  s.nombre + ' boda en hacienda CDMX',\n  'Renta de ' + s.nombre + ' profesional',\n  s.nombre + ' para fiestas elegantes',\n  s.nombre + ' instalacion RESOIL premium'\n];\n\nif (imagenesGaleria.length > 0) {\n  imagenesGaleria.slice(0, 9).forEach((img, index) => {\n    const altText = altTexts[index] || s.nombre + ' - RESOIL evento ' + (index + 1);\n    galeriaHTML += `                <div class=\"article-gallery-item\">\\n                  <img src=\"../img/${carpetaImg}/${img}\" alt=\"${altText}\" loading=\"lazy\" />\\n                </div>\\n`;\n  });\n} else {\n  // Fallback si no hay imagenes definidas\n  for (let i = 0; i < 6; i++) {\n    galeriaHTML += `                <div class=\"article-gallery-item\">\\n                  <img src=\"../img/img-index/referencia.webp\" alt=\"${altTexts[i]}\" loading=\"lazy\" />\\n                </div>\\n`;\n  }\n}\n\n// ============================================\n// HTML PROFESIONAL v14 - Estructura completa\n// ============================================\nconst html = `<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>${c.seo.titulo}</title>\n    <meta name=\"description\" content=\"${c.seo.metaDescription}\" />\n    <meta name=\"keywords\" content=\"${c.seo.metaKeywords}\" />\n\n    <!-- Open Graph Meta Tags -->\n    <meta property=\"og:title\" content=\"${c.seo.titulo}\" />\n    <meta property=\"og:description\" content=\"${c.seo.metaDescription}\" />\n    <meta property=\"og:type\" content=\"article\" />\n    <meta property=\"og:url\" content=\"${articleUrl}\" />\n    <meta property=\"og:image\" content=\"${imgUrl}\" />\n\n    <!-- Twitter Card Meta Tags -->\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:title\" content=\"${c.seo.titulo}\" />\n    <meta name=\"twitter:description\" content=\"${c.seo.metaDescription}\" />\n    <meta name=\"twitter:image\" content=\"${imgUrl}\" />\n\n    <!-- Canonical URL -->\n    <link rel=\"canonical\" href=\"${articleUrl}\" />\n\n    <!-- Favicon -->\n    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\" />\n    <link rel=\"manifest\" href=\"/site.webmanifest\" />\n\n    <!-- Styles -->\n    <link rel=\"preload\" href=\"../css/style.css\" as=\"style\" onload=\"this.onload=null;this.rel='stylesheet'\"><noscript><link rel=\"stylesheet\" href=\"../css/style.css\"></noscript>\n\n    <!-- HERO, FEATURED IMAGE & FAQ ACCORDION STYLES -->\n    <style>\n      /* Hero de Dos Columnas */\n      .article-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 4rem 0; }\n      .article-hero .container { max-width: 1200px; }\n      .article-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }\n      .article-hero-main h1.article-title { color: #fff; font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; }\n      .article-hero-main .article-tagline { color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.6; }\n      .article-hero-info { background: rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem; border: 1px solid rgba(255,255,255,0.1); }\n      .article-hero-info p { color: rgba(255,255,255,0.9); font-size: 1rem; line-height: 1.7; margin: 0 0 1.25rem 0; }\n      .article-hero-info p:last-child { margin-bottom: 0; }\n      .article-hero-info strong { color: #e94560; }\n      @media (max-width: 768px) {\n        .article-hero { padding: 2.5rem 0; }\n        .article-hero-grid { grid-template-columns: 1fr; gap: 2rem; }\n        .article-hero-main h1.article-title { font-size: 1.85rem; }\n        .article-hero-info { padding: 1.5rem; }\n      }\n\n      /* Imagen Destacada Inline (dentro del article-body) */\n      .article-featured-image-inline { margin: 0 0 2.5rem 0; text-align: center; }\n      .article-featured-image-inline .featured-image { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); }\n      .article-featured-image-inline figcaption { margin-top: 1rem; font-size: 0.9rem; color: #666; font-style: italic; }\n\n      /* FAQ Accordion */\n      .faq-container { margin-top: 1.5rem; }\n      .faq-item { background: #f8f9fa; border-radius: 8px; margin-bottom: 1rem; border: 1px solid #e9ecef; }\n      .faq-question { width: 100%; padding: 1.2rem 1.5rem; background: transparent; border: none; text-align: left; font-size: 1rem; font-weight: 600; color: #1a1a2e; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }\n      .faq-question:hover { background: #e9ecef; }\n      .faq-icon { font-size: 1.5rem; font-weight: 300; color: #e94560; transition: transform 0.3s; }\n      .faq-item.active .faq-icon { transform: rotate(45deg); }\n      .faq-answer { display: none; padding: 0 1.5rem 1.5rem; max-height: none !important; overflow: visible !important; }\n      .faq-answer p { margin: 0; color: #555; line-height: 1.7; }\n    </style>\n\n    <!-- Schema.org Article Markup (SIN FECHAS) -->\n    <script type=\"application/ld+json\">\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"Article\",\n      \"headline\": \"${c.hero.h1}\",\n      \"description\": \"${c.seo.metaDescription}\",\n      \"image\": \"${imgUrl}\",\n      \"author\": {\n        \"@type\": \"Organization\",\n        \"name\": \"RESOIL - Renta de Sonido e Iluminacion\",\n        \"url\": \"${data.baseUrl}\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"RESOIL\",\n        \"logo\": {\n          \"@type\": \"ImageObject\",\n          \"url\": \"${data.baseUrl}/img/logo.webp\"\n        }\n      },\n      \"mainEntityOfPage\": {\n        \"@type\": \"WebPage\",\n        \"@id\": \"${articleUrl}\"\n      },\n      \"articleSection\": \"${s.categoria}\",\n      \"keywords\": \"${c.seo.metaKeywords}\"\n    }\n    </script>\n\n    <!-- FAQ Schema -->\n    <script type=\"application/ld+json\">\n    ${faqSchema}\n    </script>\n  </head>\n\n  <body>\n    <!-- Header -->\n    <header class=\"header\">\n      <nav class=\"navbar\">\n        <div class=\"nav-container\">\n          <!-- Logo -->\n          <div class=\"nav-logo\">\n            <a href=\"https://rentadesonidoeiluminacion.com.mx/\" class=\"logo-link\">\n              <img\n                src=\"../img/img-index/renta-de-sonido-e-iluminacion.webp\"\n                alt=\"Renta de Sonido e Iluminacion - Logo\"\n                class=\"logo-img\"\n              />\n            </a>\n          </div>\n\n          <!-- Navegacion Principal -->\n          <nav class=\"main-nav\">\n            <ul class=\"nav-list\" id=\"nav-list\">\n              <li class=\"nav-item has-dropdown\">\n                <a href=\"../servicios.html\" class=\"nav-link\"\n                  >Servicios <span class=\"dropdown-icon\">\u25bc</span></a\n                >\n                <ul class=\"dropdown-content\">\n                  <li>\n                    <a href=\"../servicios.html\" class=\"dropdown-link\"\n                      >Todos los Servicios</a\n                    >\n                  </li>\n                  <li class=\"has-submenu\">\n                    <a\n                      href=\"../renta-de-iluminacion.html\"\n                      class=\"dropdown-link submenu-toggle\"\n                      >Iluminacion <span class=\"submenu-icon\">\u25b6</span></a\n                    >\n                    <ul class=\"submenu-content\">\n                      <li>\n                        <a href=\"../renta-de-iluminacion.html\" class=\"submenu-link\"\n                          ><strong>Ver Todos los Servicios</strong></a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../iluminacion/guirnaldas.html\" class=\"submenu-link\"\n                          >Guirnaldas LED</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../iluminacion/luces-neon.html\" class=\"submenu-link\"\n                          >Luces Neon</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../iluminacion/sky-tracker.html\" class=\"submenu-link\"\n                          >Sky Tracker</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../iluminacion/luces-arquitectonicas.html\" class=\"submenu-link\"\n                          >Luces Arquitectonicas</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../iluminacion/cascadas-led.html\" class=\"submenu-link\"\n                          >Cascadas LED</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../iluminacion/proyector-de-gobos.html\" class=\"submenu-link\"\n                          >Proyector de Gobos</a\n                        >\n                      </li>\n                    </ul>\n                  </li>\n                  <li class=\"has-submenu\">\n                    <a\n                      href=\"../renta-de-sonido.html\"\n                      class=\"dropdown-link submenu-toggle\"\n                      >Sonido <span class=\"submenu-icon\">\u25b6</span></a\n                    >\n                    <ul class=\"submenu-content\">\n                      <li>\n                        <a href=\"../renta-de-sonido.html\" class=\"submenu-link\"\n                          ><strong>Ver Todos los Servicios</strong></a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../sonido/bocinas-bodas.html\" class=\"submenu-link\"\n                          >Bocinas para Bodas</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../sonido/bocinas-xv-anos.html\" class=\"submenu-link\"\n                          >Bocinas para XV Anos</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../sonido/bocinas-fiestas.html\" class=\"submenu-link\"\n                          >Bocinas para Fiestas</a\n                        >\n                      </li>\n                    </ul>\n                  </li>\n                  <li class=\"has-submenu\">\n                    <a\n                      href=\"../equipos.html\"\n                      class=\"dropdown-link submenu-toggle\"\n                      >Equipos <span class=\"submenu-icon\">\u25b6</span></a\n                    >\n                    <ul class=\"submenu-content\">\n                      <li>\n                        <a href=\"../equipos.html\" class=\"submenu-link\"\n                          ><strong>Ver Todos los Servicios</strong></a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../equipos/bolas-disco.html\" class=\"submenu-link\"\n                          >Bolas Disco</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../equipos/maquina-de-confeti.html\" class=\"submenu-link\"\n                          >Maquina de Confeti</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../equipos/renta-de-podium.html\" class=\"submenu-link\"\n                          >Renta de Podium</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../equipos/pantalla-inflable.html\" class=\"submenu-link\"\n                          >Pantalla Inflable</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../equipos/maquina-de-humo.html\" class=\"submenu-link\"\n                          >Maquina de Humo</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../equipos/maquina-de-burbujas.html\" class=\"submenu-link\"\n                          >Maquina de Burbujas</a\n                        >\n                      </li>\n                      <li>\n                        <a href=\"../equipos/humo-bajo.html\" class=\"submenu-link\">Humo Bajo</a>\n                      </li>\n                      <li>\n                        <a href=\"../equipos/mesas-picnic.html\" class=\"submenu-link\">Mesas Picnic</a>\n                      </li>\n                      <li>\n                        <a href=\"../equipos/carpas-para-eventos.html\" class=\"submenu-link\">Carpas para Eventos</a>\n                      </li>\n                    </ul>\n                  </li>\n                </ul>\n              </li>\n              <li class=\"nav-item\">\n                <a href=\"../nosotros.html\" class=\"nav-link\">Nosotros</a>\n              </li>\n              <li class=\"nav-item\">\n                <a href=\"../blog.html\" class=\"nav-link active\">Blog</a>\n              </li>\n              <li class=\"nav-item\">\n                <a href=\"../contacto.html\" class=\"nav-link\">Contacto</a>\n              </li>\n            </ul>\n\n            <!-- Boton hamburguesa para moviles -->\n            <button\n              class=\"mobile-menu-btn\"\n              id=\"mobile-menu-btn\"\n              aria-label=\"Abrir menu\"\n            >\n              <span class=\"hamburger-line\"></span>\n              <span class=\"hamburger-line\"></span>\n              <span class=\"hamburger-line\"></span>\n            </button>\n          </nav>\n        </div>\n      </nav>\n    </header>\n\n    <!-- Main Content -->\n    <!-- Breadcrumbs -->\n    <div class=\"breadcrumb-container\">\n      <div class=\"container\">\n        <nav class=\"breadcrumb\" aria-label=\"Migas de pan\">\n          <a href=\"../index.html\">Inicio</a>\n          <span class=\"breadcrumb-separator\">\u203a</span>\n          <a href=\"../blog.html\">Blog</a>\n          <span class=\"breadcrumb-separator\">\u203a</span>\n          <span class=\"breadcrumb-current\">${breadcrumbName}</span>\n        </nav>\n      </div>\n    </div>\n\n\n    <main class=\"main-content\">\n      <!-- Article Hero - Dos Columnas -->\n      <section class=\"article-hero\">\n        <div class=\"container\">\n          <div class=\"article-hero-grid\">\n            <!-- Columna Principal: Titulo y Tagline -->\n            <div class=\"article-hero-main\">\n              <h1 class=\"article-title\">${c.hero.h1}</h1>\n              <p class=\"article-tagline\">${c.hero.tagline}</p>\n            </div>\n            <!-- Columna Secundaria: Descripcion SEO -->\n            <div class=\"article-hero-info\">\n              <p>${c.hero.infoBox.parrafo1}</p>\n              <p>${c.hero.infoBox.parrafo2}</p>\n            </div>\n          </div>\n        </div>\n      </section>\n\n      <!-- Article Content con Sidebar -->\n      <article class=\"article-content\">\n        <div class=\"container\">\n          <div class=\"article-body\">\n\n            <!-- Imagen Destacada del Articulo -->\n            <figure class=\"article-featured-image-inline\">\n              <img\n                src=\"${imgPath}\"\n                alt=\"${c.imagenAlt || s.nombreCompleto + ' - RESOIL'}\"\n                class=\"featured-image\"\n                loading=\"eager\"\n              />\n              <figcaption>${c.imagenCaption || s.nombreCompleto + ' - RESOIL'}</figcaption>\n            </figure>\n\n            <!-- Introduccion -->\n            <section class=\"article-section\">\n              ${c.introduccion.parrafo1}\n\n              ${c.introduccion.parrafo2}\n            </section>\n\n${seccionesHTML}\n\n            <!-- Galeria de Imagenes -->\n            <section class=\"article-section\">\n              <h2>Galeria: ${s.nombre} en Eventos Reales</h2>\n              <p>\n                Instalaciones profesionales de ${s.nombre.toLowerCase()} que transforman eventos en ${e.cobertura}. Cada imagen representa nuestro trabajo real en bodas, XV anos y eventos corporativos.\n              </p>\n\n              <div class=\"article-gallery\">\n\\${galeriaHTML}              </div>\n            </section>\n\n            <!-- Preguntas Frecuentes -->\n            <section class=\"article-section\">\n              <h2>Preguntas Frecuentes sobre ${s.nombre}</h2>\n              <p>Respuestas a las dudas mas comunes sobre ${s.nombre.toLowerCase()} para eventos.</p>\n              <div class=\"faq-container\">\n${faqItemsHTML}\n              </div>\n            </section>\n\n            <!-- CTA Final -->\n            <section class=\"article-section article-cta\">\n              <h2>${c.cta.titulo}</h2>\n\n              <p>\n                ${c.cta.parrafo1}\n              </p>\n\n              <p>\n                ${c.cta.parrafo2}\n              </p>\n\n              <div class=\"article-cta-buttons\">\n                <a\n                  href=\"https://wa.me/${data.whatsappNumber}?text=${whatsappMsg}\"\n                  class=\"cta-btn primary\"\n                  target=\"_blank\"\n                  rel=\"noopener noreferrer\"\n                >\n                  ${c.cta.botonPrimario || 'Cotizar por WhatsApp'}\n                </a>\n                <a href=\"../contacto.html\" class=\"cta-btn secondary\">\n                  ${c.cta.botonSecundario || 'Solicitar Cotizacion Detallada'}\n                </a>\n              </div>\n            </section>\n\n          </div>\n\n          <!-- Sidebar con Informacion Adicional -->\n          <aside class=\"article-sidebar\">\n            <div class=\"sidebar-box\">\n              <h3>Especificaciones Rapidas</h3>\n              <ul class=\"sidebar-list\">\n${especsRapidasHTML}\n              </ul>\n            </div>\n\n${infoAdicionalHTML}\n\n            <div class=\"sidebar-box\">\n              <h3>Servicios Relacionados</h3>\n              <ul class=\"sidebar-links\">\n${serviciosRelHTML}\n              </ul>\n            </div>\n\n            <div class=\"sidebar-box sidebar-cta\">\n              <h3>\u00bfNecesitas Asesoria?</h3>\n              <p>Nuestros expertos estan disponibles para ayudarte a planear ${s.nombre.toLowerCase()} perfecto para tu evento.</p>\n              <a\n                href=\"https://wa.me/${data.whatsappNumber}?text=${encodeURIComponent('Necesito asesoria sobre ' + s.nombre + ' para mi evento')}\"\n                class=\"sidebar-cta-btn\"\n                target=\"_blank\"\n                rel=\"noopener noreferrer\"\n              >\n                Contactar Experto\n              </a>\n            </div>\n          </aside>\n\n        </div>\n      </article>\n\n      <!-- Articulos Relacionados -->\n      <section class=\"related-articles-section\">\n        <div class=\"container\">\n          <div class=\"section-header\">\n            <h2>ARTICULOS RELACIONADOS</h2>\n            <p class=\"section-subtitle\">\n              Continua aprendiendo sobre ${s.categoria.toLowerCase()} profesional para eventos\n            </p>\n          </div>\n\n          <div class=\"related-articles-grid\">\n${articulosRelHTML}\n          </div>\n\n          <div class=\"related-articles-cta\">\n            <a href=\"../blog.html\" class=\"related-articles-button\">Ver Todos los Articulos</a>\n          </div>\n        </div>\n      </section>\n\n    </main>\n\n    <!-- Footer -->\n    <footer class=\"footer\">\n      <div class=\"footer-container\">\n        <!-- Informacion de contacto -->\n        <div class=\"footer-section\">\n          <h3 class=\"footer-title\">RENTA DE SONIDO E ILUMINACION</h3>\n          <p class=\"footer-description\">\n            Especialistas en renta de equipos de sonido e iluminacion profesional para todo tipo de eventos en Ciudad de Mexico.\n          </p>\n        </div>\n\n        <!-- Enlaces rapidos -->\n        <div class=\"footer-section\">\n          <h4 class=\"footer-subtitle\">Enlaces Rapidos</h4>\n          <ul class=\"footer-links\">\n            <li><a href=\"../index.html#inicio\">Inicio</a></li>\n            <li><a href=\"../servicios.html\">Servicios</a></li>\n            <li><a href=\"../nosotros.html\">Nosotros</a></li>\n            <li><a href=\"../equipos.html\">Equipos</a></li>\n            <li><a href=\"../blog.html\">Blog</a></li>\n            <li><a href=\"../contacto.html\">Contacto</a></li>\n          </ul>\n        </div>\n\n        <!-- Servicios de Iluminacion -->\n        <div class=\"footer-section\">\n          <h4 class=\"footer-subtitle\">Iluminacion Profesional</h4>\n          <ul class=\"footer-links\">\n            <li><a href=\"../renta-de-iluminacion.html\"><strong>Todos los Servicios</strong></a></li>\n            <li><a href=\"../iluminacion/guirnaldas.html\">Guirnaldas LED</a></li>\n            <li><a href=\"../iluminacion/luces-neon.html\">Luces Neon</a></li>\n            <li><a href=\"../iluminacion/sky-tracker.html\">Sky Tracker</a></li>\n            <li><a href=\"../iluminacion/luces-arquitectonicas.html\">Luces Arquitectonicas</a></li>\n          </ul>\n        </div>\n\n        <!-- Servicios de Sonido -->\n        <div class=\"footer-section\">\n          <h4 class=\"footer-subtitle\">Sonido Profesional</h4>\n          <ul class=\"footer-links\">\n            <li><a href=\"../renta-de-sonido.html\"><strong>Todos los Servicios</strong></a></li>\n            <li><a href=\"../sonido/bocinas-bodas.html\">Bocinas para Bodas</a></li>\n            <li><a href=\"../sonido/bocinas-xv-anos.html\">Bocinas para XV Anos</a></li>\n            <li><a href=\"../sonido/bocinas-fiestas.html\">Bocinas para Fiestas</a></li>\n          </ul>\n        </div>\n\n        <!-- Contacto -->\n        <div class=\"footer-section\">\n          <h4 class=\"footer-subtitle\">Informacion de Contacto</h4>\n          <div class=\"footer-contact\">\n            <p>\n              Montecito 38, Napoles<br />Benito Juarez, 03810<br />Ciudad de Mexico, CDMX\n            </p>\n            <p>\n              <strong>WhatsApp:</strong>\n              <a href=\"https://wa.me/${data.whatsappNumber}\" target=\"_blank\" rel=\"noopener noreferrer\">\n                ${e.telefono}\n              </a>\n            </p>\n            <p>\n              <strong>Email:</strong>\n              <a href=\"mailto:${e.email}\"\n                >${e.email}</a\n              >\n            </p>\n          </div>\n        </div>\n      </div>\n    </footer>\n\n    <!-- Scripts -->\n\n    <!-- Boton Flotante de WhatsApp -->\n    <div class=\"whatsapp-float\">\n      <a href=\"https://wa.me/${data.whatsappNumber}?text=Hola,%20me%20interesa%20cotizar%20un%20servicio%20de%20sonido%20e%20iluminacion\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Contactar por WhatsApp\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\">\n          <path d=\"M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z\"/>\n        </svg>\n      </a>\n      <span class=\"tooltip\">\u00a1Chatea con nosotros!</span>\n    </div>\n\n    <script src=\"../js/app.js\" defer></script>\n\n    <!-- FAQ Accordion Script -->\n    <script>\n    document.addEventListener('DOMContentLoaded', function() {\n      const faqItems = document.querySelectorAll('.faq-item');\n      faqItems.forEach(item => {\n        const question = item.querySelector('.faq-question');\n        const answer = item.querySelector('.faq-answer');\n        question.addEventListener('click', () => {\n          const isActive = item.classList.contains('active');\n          // Cerrar todos\n          faqItems.forEach(i => {\n            i.classList.remove('active');\n            i.querySelector('.faq-answer').style.display = 'none';\n            i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');\n          });\n          // Abrir el clickeado si no estaba activo\n          if (!isActive) {\n            item.classList.add('active');\n            answer.style.display = 'block';\n            question.setAttribute('aria-expanded', 'true');\n          }\n        });\n      });\n    });\n    </script>\n  </body>\n</html>`;\n\n// Card para blog.html\nconst card = `\n            <article class=\"blog-card\" data-slug=\"${data.slugFinal}\">\n              <div class=\"blog-card-image\">\n                <a href=\"blog/${data.filename}\">\n                  <img src=\"img/blog/${data.imagenFilename}\" alt=\"${s.nombreCompleto}\" loading=\"lazy\">\n                  <span class=\"blog-badge\">NUEVO</span>\n                </a>\n              </div>\n              <div class=\"blog-card-content\">\n                <div class=\"blog-card-category\">${s.categoria}</div>\n                <h3 class=\"blog-card-title\">\n                  <a href=\"blog/${data.filename}\">${c.hero.h1}</a>\n                </h3>\n                <p class=\"blog-card-excerpt\">${c.seo.metaDescription}</p>\n                <div class=\"blog-card-meta\">\n                  <span class=\"blog-read-time\">8 min lectura</span>\n                  <span class=\"blog-topic\">${s.eventos.slice(0,3).join(' \u2022 ')}</span>\n                </div>\n                <a href=\"blog/${data.filename}\" class=\"blog-card-button\">LEER ARTICULO</a>\n              </div>\n            </article>\n`;\n\nreturn [{json: {...data, htmlArticulo: html, cardHTML: card}}];"
+      },
+      "id": "52c32c51-8b76-4f98-9391-9f8e664adf2d",
+      "name": "Generar HTML Profesional v14",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\nconst buffer = Buffer.from(data.htmlArticulo, 'utf-8');\n\nreturn [{\n  json: data,\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/html',\n      fileName: data.filename\n    }\n  }\n}];"
+      },
+      "id": "20ec1151-cb4b-4948-ae1a-3db3543b82d7",
+      "name": "Preparar HTML FTP",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1280,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "path": "=/website_d2c4cb8e/blog/{{ $json.filename }}"
+      },
+      "id": "3f8422d7-0159-48ee-960d-e3f53d8c88e1",
+      "name": "FTP Subir Articulo",
+      "type": "n8n-nodes-base.ftp",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "ftp": {
+          "id": "ftp-resoil",
+          "name": "FTP RESOIL"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "/website_d2c4cb8e/blog.html",
+        "options": {}
+      },
+      "id": "71cd5986-f58d-4ea0-a9a5-14c6c462aad2",
+      "name": "FTP Descargar Blog",
+      "type": "n8n-nodes-base.ftp",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "ftp": {
+          "id": "ftp-resoil",
+          "name": "FTP RESOIL"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first();\nconst dataArticulo = $('Generar HTML Profesional v14').first().json;\n\nlet blogHTML = Buffer.from(input.binary.data.data, 'base64').toString('utf-8');\n\nif (blogHTML.includes('data-slug=\"' + dataArticulo.slugFinal + '\"')) {\n  return [{\n    json: {...dataArticulo, blogUpdated: false, mensaje: 'Card ya existia - no duplicada'},\n    binary: {\n      data: {\n        data: Buffer.from(blogHTML, 'utf-8').toString('base64'),\n        mimeType: 'text/html',\n        fileName: 'blog.html'\n      }\n    }\n  }];\n}\n\nblogHTML = blogHTML.replace(/<span class=\"blog-badge\">NUEVO<\\/span>/gi, '');\n\nconst marker = '<div class=\"blog-grid\">';\nconst idx = blogHTML.indexOf(marker);\nif (idx === -1) {\n  throw new Error('No se encontro el contenedor blog-grid en blog.html');\n}\n\nconst insertPos = idx + marker.length;\nblogHTML = blogHTML.slice(0, insertPos) + '\\n' + dataArticulo.cardHTML + blogHTML.slice(insertPos);\n\nreturn [{\n  json: {...dataArticulo, blogUpdated: true, mensaje: 'Card insertada exitosamente'},\n  binary: {\n    data: {\n      data: Buffer.from(blogHTML, 'utf-8').toString('base64'),\n      mimeType: 'text/html',\n      fileName: 'blog.html'\n    }\n  }\n}];"
+      },
+      "id": "533094aa-d7d7-4305-b375-60470742a2a2",
+      "name": "Insertar Card",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "path": "/website_d2c4cb8e/blog.html"
+      },
+      "id": "46f51b37-cd01-4112-8094-8357beee4b31",
+      "name": "FTP Subir Blog",
+      "type": "n8n-nodes-base.ftp",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "ftp": {
+          "id": "ftp-resoil",
+          "name": "FTP RESOIL"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "772938445",
+        "text": "=\u2705 *ARTICULO PROFESIONAL v14 PUBLICADO*\n\n\ud83d\udcdd *{{ $json.contenido.seo.titulo }}*\n\n\ud83c\udff7\ufe0f {{ $json.servicio.categoria }} | {{ $json.servicio.nombre }}\n\n\ud83d\uddbc\ufe0f {{ $json.imagenFilename }}\n\ud83d\udcc4 {{ $json.filename }}\n\n\ud83d\udd17 {{ $json.baseUrl }}/blog/{{ $json.filename }}\n\n\ud83d\udcca {{ $json.mensaje }}\n\n\u2728 *Caracteristicas v14:*\n\u2022 Hero de dos columnas con grid\n\u2022 Imagen destacada inline\n\u2022 FAQ Schema con 6 preguntas\n\u2022 FAQ Accordion interactivo\n\u2022 Sidebar con especificaciones\n\u2022 Contenido atemporal (sin fechas)\n\u2022 Schema.org Article + FAQPage\n\u2022 Articulos relacionados\n\n\ud83e\udd16 RESOIL Blog Generator v14 Profesional",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "6e080266-76c4-48c3-9766-2049fcee4596",
+      "name": "Telegram Notificacion",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2480,
+        500
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-resoil",
+          "name": "Telegram Bot RESOIL"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Cada 4 Dias": {
+      "main": [
+        [
+          {
+            "node": "Selector Servicio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ejecutar Manual": {
+      "main": [
+        [
+          {
+            "node": "Selector Servicio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Selector Servicio": {
+      "main": [
+        [
+          {
+            "node": "Constructor Prompt Pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Constructor Prompt Pro": {
+      "main": [
+        [
+          {
+            "node": "ChatGPT API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ChatGPT API": {
+      "main": [
+        [
+          {
+            "node": "Validar Respuesta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Respuesta": {
+      "main": [
+        [
+          {
+            "node": "Constructor DALL-E Pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Constructor DALL-E Pro": {
+      "main": [
+        [
+          {
+            "node": "DALL-E 3 API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DALL-E 3 API": {
+      "main": [
+        [
+          {
+            "node": "Validar DALL-E",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar DALL-E": {
+      "main": [
+        [
+          {
+            "node": "Descargar Imagen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Descargar Imagen": {
+      "main": [
+        [
+          {
+            "node": "Preparar Imagen FTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar Imagen FTP": {
+      "main": [
+        [
+          {
+            "node": "FTP Subir Imagen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FTP Subir Imagen": {
+      "main": [
+        [
+          {
+            "node": "Generar HTML Profesional v14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generar HTML Profesional v14": {
+      "main": [
+        [
+          {
+            "node": "Preparar HTML FTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar HTML FTP": {
+      "main": [
+        [
+          {
+            "node": "FTP Subir Articulo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FTP Subir Articulo": {
+      "main": [
+        [
+          {
+            "node": "FTP Descargar Blog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FTP Descargar Blog": {
+      "main": [
+        [
+          {
+            "node": "Insertar Card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insertar Card": {
+      "main": [
+        [
+          {
+            "node": "FTP Subir Blog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FTP Subir Blog": {
+      "main": [
+        [
+          {
+            "node": "Telegram Notificacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "572fd7c66400f7bf7ea53b24112cd88f69fabbb31d14d753a85ed8e59bfded7b"
+  }
+}

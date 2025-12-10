@@ -1,0 +1,52 @@
+ruta,tipo,problema,prioridad,recomendacion,estado
+/blog.html,HTML,9 artículos referenciados pero no existentes generan 404,CRÍTICA,"Eliminar tarjetas de artículos 3-11 o crear los artículos faltantes usando DOCUMENTO-ARTICULOS.md",CORREGIDO
+/apple-touch-icon.png,Imagen,Favicon faltante (180x180px),CRÍTICA,"Crear usando https://realfavicongenerator.net/ o ImageMagick. Subir a raíz del sitio.",CORREGIDO
+/favicon-32x32.png,Imagen,Favicon faltante (32x32px),CRÍTICA,Crear favicon de 32x32px y subir a raíz del sitio,CORREGIDO
+/favicon-16x16.png,Imagen,Favicon faltante (16x16px),CRÍTICA,Crear favicon de 16x16px y subir a raíz del sitio,CORREGIDO
+/blog/guirnaldas-luces-vintage-eventos.html,HTML,URLs canónicas con dominio incorrecto,CRÍTICA,"Reemplazar resoil.com.mx por rentadesonidoeiluminacion.com.mx en og:url y canonical",CORREGIDO
+/blog/iluminacion-bodas-jardin.html,HTML,URLs canónicas con dominio incorrecto,CRÍTICA,"Reemplazar resoil.com.mx por rentadesonidoeiluminacion.com.mx en og:url y canonical",CORREGIDO
+/robots.txt,Configuración,Archivo robots.txt faltante,ALTA,"Crear robots.txt en raíz con directivas Allow, Disallow y Sitemap. Ver template en informe.",CORREGIDO
+/sitemap.xml,XML,Archivo sitemap.xml faltante,ALTA,Crear sitemap.xml con todas las 32 URLs del sitio. Ver template completo en informe.,CORREGIDO
+/img/img-index/referencia.webp,Imagen,Imagen no optimizada (856 KB),ALTA,"Comprimir a 120 KB usando Squoosh CLI con quality:80. Renombrar a iluminacion-eventos-cdmx.webp",CORREGIDO
+/img/img-index/renta-de-sonido-e-iluminacion.webp,Imagen,Logo no optimizado (~150 KB),ALTA,Comprimir a 40 KB y optimizar para web,CORREGIDO
+Todas las páginas HTML,HTML,Falta lazy loading en imágenes,ALTA,"Agregar loading=""lazy"" a todas las imágenes except hero images",CORREGIDO
+/css/style.css,CSS,CSS no minificado,MEDIA,"Minificar con cssnano. Comando: npx cssnano css/style.css css/style.min.css",CORREGIDO
+/js/app.js,JavaScript,JavaScript no minificado,MEDIA,"Minificar con terser. Comando: npx terser js/app.js -o js/app.min.js",CORREGIDO
+Múltiples páginas,HTML,Meta descriptions posiblemente duplicadas,ALTA,"Auditar todas las meta descriptions. Cada página debe tener description única de 150-160 caracteres con keywords y ubicación",CORREGIDO
+Múltiples páginas,HTML,Verificar H1 único por página,ALTA,"Auditar que cada página tenga exactamente 1 H1. Comando verificación en informe.",CORREGIDO
+Múltiples páginas,HTML,Posibles imágenes sin alt text,MEDIA,"Buscar imágenes sin alt. Comando: grep -rn '<img' *.html | grep -v 'alt='. Agregar alt descriptivos de 80-125 caracteres.",CORREGIDO
+Múltiples páginas,HTML,Enlaces internos posiblemente inconsistentes,MEDIA,Estandarizar todos los enlaces internos para incluir extensión .html,CORREGIDO
+/index.html,HTML,Falta Schema.org Organization markup,MEDIA,Agregar JSON-LD Organization en homepage. Ver snippet completo en informe sección 13.,CORREGIDO
+Páginas de servicio,HTML,Falta Schema.org Service markup,MEDIA,Agregar JSON-LD Service en cada página de servicio individual. Ver snippet en informe sección 14.,PENDIENTE
+Páginas de blog y subcategorías,HTML,Breadcrumbs sin markup Schema.org,MEDIA,Agregar JSON-LD BreadcrumbList. Ver snippet en informe sección 12.,PENDIENTE
+Todas las páginas,HTML,Falta atributos ARIA en elementos interactivos,MEDIA,"Agregar aria-label a botones, formularios y navegación. Ver ejemplos en sección Accesibilidad.",PENDIENTE
+Todas las páginas,Accesibilidad,Falta skip links para navegación,MEDIA,"Agregar <a href=""#main-content"" class=""skip-link"">Saltar al contenido</a> al inicio del body",PENDIENTE
+/css/style.css,CSS,Verificar contraste de colores WCAG,BAJA,"Verificar contraste de colores con https://webaim.org/resources/contrastchecker/. Mínimo 4.5:1 para texto normal.",PENDIENTE
+Servidor,Configuración,Verificar compresión gzip/brotli,BAJA,"Verificar headers: curl -H ""Accept-Encoding: gzip"" -I [URL]. Configurar si falta. Ver .htaccess en anexo.",PENDIENTE
+/404.html,HTML,Página 404 podría mejorarse,BAJA,Mejorar con enlaces útiles y CTA de WhatsApp. Ver snippet en Anexo B.,PENDIENTE
+Todas las páginas,SEO,Falta hreflang para región específica,BAJA,"Agregar hreflang es-mx si solo opera en México: <link rel=""alternate"" hreflang=""es-mx"" href=...",PENDIENTE
+/contacto.html,HTML,Verificar validación HTML5 en formulario,BAJA,"Agregar atributos required, pattern, minlength en campos. Ver ejemplo en sección 19.",PENDIENTE
+DOCUMENTO-ARTICULOS.md,Documentación,URLs con dominio incorrecto en plantilla,CRÍTICA,"Reemplazar todas las instancias de resoil.com.mx por rentadesonidoeiluminacion.com.mx",CORREGIDO
+/blog/guirnaldas-luces-vintage-eventos.html,HTML,Schema.org con URL de logo incorrecta,CRÍTICA,Actualizar URL de logo en Schema.org publisher a rentadesonidoeiluminacion.com.mx,CORREGIDO
+/blog/iluminacion-bodas-jardin.html,HTML,Schema.org con URL de logo e imagen incorrectas,CRÍTICA,Actualizar URLs en Schema.org a rentadesonidoeiluminacion.com.mx,CORREGIDO
+/blog/iluminacion-bodas.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+/blog/sonido-eventos-corporativos.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+/blog/iluminacion-arquitectonica-eventos.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+/blog/presupuesto-xv-anos.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+/blog/tendencias-iluminacion-eventos.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+/blog/checklist-sonido-evento.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+/blog/efectos-especiales-eventos.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+/blog/acustica-venues-eventos.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+/blog/iluminacion-fotografia-eventos.html,HTML,Artículo referenciado pero no existe,CRÍTICA,Crear artículo siguiendo DOCUMENTO-ARTICULOS.md o eliminar referencia de blog.html,PENDIENTE
+Imágenes de galería,Imagen,Múltiples imágenes sin optimizar (~600 KB cada una),ALTA,"Procesar por lotes con Squoosh CLI. Renombrar con convención SEO: servicio-tipo-evento-numero.webp",PENDIENTE
+/servicios.html,HTML,Contenido posiblemente corto,MEDIA,Verificar longitud de contenido. Expandir a 800-1200 palabras si necesario.,PENDIENTE
+/renta-de-iluminacion.html,HTML,Posible falta de sección FAQ,MEDIA,Agregar sección FAQ con Schema.org FAQPage. Ver ejemplo en sección de contenido.,PENDIENTE
+/renta-de-sonido.html,HTML,Posible falta de sección FAQ,MEDIA,Agregar sección FAQ con Schema.org FAQPage,PENDIENTE
+Páginas principales,HTML,Falta sección de testimonios,MEDIA,Agregar testimonios con Schema.org Review markup. Ver ejemplo en sección de contenido.,PENDIENTE
+Todas las subcategorías,HTML,Contenido podría expandirse,MEDIA,"Expandir contenido de servicios individuales de 500 a 1000+ palabras siguiendo estructura: Intro, Qué es, Tipos, Eventos ideales, Proceso, Por qué RESOIL, FAQ, CTA",PENDIENTE
+Servidor,Configuración,Cache headers podrían optimizarse,BAJA,Configurar expires headers para recursos estáticos. Ver configuración .htaccess en Anexo C.,PENDIENTE
+Múltiples páginas,Mobile,Verificar touch targets mínimo 48x48px,MEDIA,Auditar botones y enlaces en móvil. Ajustar CSS para min-height y min-width de 48px en elementos táctiles.,PENDIENTE
+Múltiples páginas,Mobile,Verificar texto legible en móvil,MEDIA,Asegurar font-size mínimo de 16px en body para evitar zoom automático en iOS,PENDIENTE
+/img/,Imágenes,Nombres de archivo no SEO-friendly,ALTA,"Renombrar imágenes según convención: servicio-tipo-evento-caracteristica-numero.webp. Actualizar referencias en HTML.",PENDIENTE
+Google Search Console,Configuración,Configurar y verificar propiedad,ALTA,Verificar propiedad del sitio en Google Search Console y subir sitemap.xml,PENDIENTE
+Google Analytics,Configuración,Configurar tracking,MEDIA,Implementar Google Analytics 4 para monitoreo de tráfico y comportamiento,PENDIENTE

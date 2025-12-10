@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Páginas Principales -->
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/servicios.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/nosotros.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/contacto.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Categorías Principales -->
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/renta-de-iluminacion.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/renta-de-sonido.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Servicios de Iluminación -->
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/iluminacion/guirnaldas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/iluminacion/luces-neon.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/iluminacion/sky-tracker.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/iluminacion/luces-arquitectonicas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/iluminacion/cascadas-led.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/iluminacion/proyector-de-gobos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Servicios de Sonido -->
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/sonido/bocinas-bodas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/sonido/bocinas-xv-anos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/sonido/bocinas-fiestas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/sonido/bocinas-conferencias.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/sonido/bocinas-graduaciones.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/sonido/bocinas-bautizos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Equipos -->
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/bolas-disco.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/maquina-de-confeti.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/renta-de-podium.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/pantalla-inflable.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/maquina-de-humo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/maquina-de-burbujas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/humo-bajo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/mesas-picnic.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/equipos/carpas-para-eventos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Artículos del Blog -->
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/blog/guirnaldas-luces-vintage-eventos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/blog/iluminacion-bodas-jardin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/blog/renta-guirnaldas-led-cdmx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/blog/sonido-conferencias.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/blog/proyector-gobos-personalizado.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/blog/proyector-gobos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Página 404 -->
+  <url>
+    <loc>https://rentadesonidoeiluminacion.com.mx/404.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+  
+</urlset>

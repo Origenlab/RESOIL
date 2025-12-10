@@ -1,0 +1,16 @@
+# robots.txt para rentadesonidoeiluminacion.com.mx
+
+User-agent: *
+Allow: /
+
+# Bloquear archivos no relevantes para SEO
+Disallow: /css/
+Disallow: /js/
+Disallow: /*.json$
+
+# Permitir rastreo de imágenes
+User-agent: Googlebot-Image
+Allow: /img/
+
+# Sitemap
+Sitemap: https://rentadesonidoeiluminacion.com.mx/sitemap.xml
